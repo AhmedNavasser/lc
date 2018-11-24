@@ -1,0 +1,33 @@
+
+    <nav class="navbar">
+      <mat-toolbar color="primary" class="mat-elevation-z8">
+        <ul class='navigation navbar-end'>
+            <li> <button mat-button routerLink="home">خانه</button></li>
+          <li> <button mat-button routerLink="laleCard">خرید لاله کارت</button></li>
+          <li> <button mat-button>اینترنت پر سرعت</button></li>
+          <li> <button mat-button>بیمه اقساطی</button></li>
+        </ul>
+        <div class='navbar-start'>
+            <button mat-button [matMenuTriggerFor]="menu" >
+              <mat-icon class="mat-18">more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" class="level-item">
+              <button mat-menu-item class="level-item" matTooltip="ورود به حساب کاربری">
+                ورود
+                <i class="material-icons">
+                  fingerprint
+                  </i>
+              </button>
+              <button mat-menu-item class="level-item"  matTooltip="تغییر قالب">
+قالب
+                <i class="material-icons">
+                    style
+                  </i>
+              </button>
+
+            </mat-menu>
+        </div>
+        </mat-toolbar>
+    </nav>
+
+
