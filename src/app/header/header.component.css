@@ -12,6 +12,7 @@
 }
 .navigation{
   display: flex;
+  align-content: space-between;
   font-family: shabnam;
 }
 .navigation li{
@@ -22,4 +23,9 @@ button{
 }
 button[mattooltip]{
   font-family: shabnam;
+}
+.navigation img{
+  fill: white;
+  height: 50px;
+  width: 80px;
 }

@@ -1,58 +1,89 @@
+<div
+  style="color: white;padding:35px;height: 50vh;position:relative"
+  class="particle-background"
+>
+  <particles
+    [params]="myParams"
+    [style]="myStyle"
+    [width]="width"
+    [height]="height"
+  >
+  </particles>
 
-  <div style="background-color: #3F51B5;color: white;padding:35px; height: 800px" >
- <particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height">
+  <div fxLayout="column">
+    <div fxLayoutAlign="space-around center">
+      <h1>
+             با شما هستیم، در هر زمان و هر مکان
+        </h1>
+    </div>
+  </div>
+  <div fxLayoutAlign="space-around center">
+    <button
+      mat-raised-button
+      color="accent"
+      style="margin-top:30px;font-family: shabnamBold;padding: 10PX;"
+      (click)="onRegister()"
+    >
+      برای خرید لاله کارت همین الان اقدام کنید
+    </button>
+  </div>
+</div>
 
- </particles>
-    <div calss="level has-text-centered" >
-     <p class="level-item" style="font-family: shabnamBold;font-size: 30px;">با شما هستیم، در هر زمان و هر مکان</p>
-   </div>
-   <div class="level-item">
-      <button  mat-raised-button  color="accent" style="margin-top:30px;font-family: shabnamBold;padding: 10PX;" (click)="onRegister()">برای خرید لاله کارت همین الان اقدام کنید</button>
-   </div>
- </div>
- <div class="tile is-ancestor">
-   <div class="tile is-vertical is-8">
-     <div class="tile">
-       <div class="tile is-parent is-vertical">
-         <article class="tile is-child notification is-primary">
-           <p class="title">لاله کارت</p>
-           <p class="subtitle">Top tile</p>
-         </article>
-         <article class="tile is-child notification is-warning">
-           <p class="title">...tiles</p>
-           <p class="subtitle">Bottom tile</p>
-         </article>
-       </div>
-       <div class="tile is-parent">
-         <article class="tile is-child notification is-info">
-           <p class="title">Middle tile</p>
-           <p class="subtitle">With an image</p>
-           <figure class="image is-4by3">
-             <img src="https://bulma.io/images/placeholders/640x480.png">
-           </figure>
-         </article>
-       </div>
-     </div>
-     <div class="tile is-parent">
-       <article class="tile is-child notification is-danger">
-         <p class="title">Wide tile</p>
-         <p class="subtitle">Aligned with the right tile</p>
-         <div class="content">
-           <!-- Content -->
-         </div>
-       </article>
-     </div>
-   </div>
-   <div class="tile is-parent">
-     <article class="tile is-child notification is-success">
-       <div class="content">
-         <p class="title">Tall tile</p>
-         <p class="subtitle">With even more content</p>
-         <div class="content">
-           <!-- Content -->
-         </div>
-       </div>
-     </article>
-   </div>
- </div>
+
+
+<div class="artboard-container">
+  <div class="right"><div class="image"></div></div>
+  <div class="text-content particle-background">
+    <p>
+      شبکه خدماتی رفاهی لاله سامانه هوشمند یکپارچه اقتصادی با هدف کاهش هزینه های
+      زندگی مردم کشور عزیزمان با ایجاد رقابت بین تولید کنندگان و خدمات دهندگان
+      توانمند کشوربه وسیله دسترسی آسان متقاضیان به کالا و خدمات مورد نظر ایجاد
+      گردیده است که این امر مهم موجب شکوفایی اقتصادی و توانمد سازی کاربران و
+      اعضاء محترم شبکه خدمات رفاهی لاله شده است. کاهش هزینه ها و مخارج زندگی
+      اعضاء که با پرداخت تسهیلات کم بهره و ارائه تخفیفات حداکثری به وسیله کارت
+      هوشمند و نرم افزارهای پرداخت الکترونیکیو ساخت اولین سامانه ی خزانه متمرکز
+      مالی که با سیاستهای بهبود معیشت مردم کشور و ایجاد اشتغال و افزایش سطح
+      دسترسی محرومان و نیازمندان به کالاها و خدمات گرنقیمت و همینطور جلب رضایت
+      کاربران خود د با بهبود کیفیت خدمات و ارائه ضمانتهای لازم در قبال انجام
+      خدمات از جمله برنامه های این شرکت می باشد.
+    </p>
+  </div>
+</div>
+<div class="artboard-container accent-background">
+  <div class="left"><div class="image"></div></div>
+  <div class="text-content">
+    <p>
+      شبکه خدماتی رفاهی لاله سامانه هوشمند یکپارچه اقتصادی با هدف کاهش هزینه های
+      زندگی مردم کشور عزیزمان با ایجاد رقابت بین تولید کنندگان و خدمات دهندگان
+      توانمند کشوربه وسیله دسترسی آسان متقاضیان به کالا و خدمات مورد نظر ایجاد
+      گردیده است که این امر مهم موجب شکوفایی اقتصادی و توانمد سازی کاربران و
+      اعضاء محترم شبکه خدمات رفاهی لاله شده است. کاهش هزینه ها و مخارج زندگی
+      اعضاء که با پرداخت تسهیلات کم بهره و ارائه تخفیفات حداکثری به وسیله کارت
+      هوشمند و نرم افزارهای پرداخت الکترونیکیو ساخت اولین سامانه ی خزانه متمرکز
+      مالی که با سیاستهای بهبود معیشت مردم کشور و ایجاد اشتغال و افزایش سطح
+      دسترسی محرومان و نیازمندان به کالاها و خدمات گرنقیمت و همینطور جلب رضایت
+      کاربران خود د با بهبود کیفیت خدمات و ارائه ضمانتهای لازم در قبال انجام
+      خدمات از جمله برنامه های این شرکت می باشد.
+    </p>
+  </div>
+</div>
+<footer >
+  <div class="footer-background" fxLayout="row" fxLayoutAlign="space-around start" fxLayout.xs="column" fxLayoutGap="10px">
+
+        <div style="position: absolute;top: 420px;right: 550px;">
+          <ul style="list-style: none">
+            <li style="list-style: none" > <a routerLink="laleCard" style="color: rgba(192, 192, 192, 0.315);text-decoration: none;">لینک های مفید</a></li>
+            <li> <a routerLink="laleCard" style="color: rgba(192, 192, 192, 0.315);text-decoration: none;">لاله کارت</a></li>
+            <li> <a routerLink="laleCard" style="color: rgba(192, 192, 192, 0.315);text-decoration: none;">لاله کارت</a></li>
+            <li> <a routerLink="laleCard" style="color: rgba(192, 192, 192, 0.315);text-decoration: none;">لاله کارت</a></li>
+            <li> <a routerLink="laleCard" style="color: rgba(192, 192, 192, 0.315);text-decoration: none;">لاله کارت</a></li>
+          </ul>
+          </div>
+
+  </div>
+</footer>
+
+
+
+
 

@@ -11,6 +11,9 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
 import { ParticlesModule } from 'angular-particle';
+import { ChangeThemeService } from './services/change-theme.service';
+import { FooterComponent } from './footer/footer.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 
 @NgModule({
@@ -19,7 +22,8 @@ import { ParticlesModule } from 'angular-particle';
     HeaderComponent,
     LaleCardComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -27,9 +31,10 @@ import { ParticlesModule } from 'angular-particle';
     BrowserAnimationsModule,
     MaterilDesign,
     FormsModule,
-    ParticlesModule
+    ParticlesModule,
+    FlexLayoutModule
   ],
-  providers: [],
+  providers: [ChangeThemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

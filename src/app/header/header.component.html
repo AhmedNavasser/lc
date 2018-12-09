@@ -1,33 +1,59 @@
+<div color="primary" id="header">
+  <nav>
+    <mat-toolbar
+      fxLayout="row"
+      fxLayoutAlign="space-between center"
+      fxLayout.xs="column"
+      color="primary"
+      class="mat-elevation-z8"
+    >
 
-    <nav class="navbar">
-      <mat-toolbar color="primary" class="mat-elevation-z8">
-        <ul class='navigation navbar-end'>
-            <li> <button mat-button routerLink="home">خانه</button></li>
-          <li> <button mat-button routerLink="laleCard">خرید لاله کارت</button></li>
-          <li> <button mat-button>اینترنت پر سرعت</button></li>
-          <li> <button mat-button>بیمه اقساطی</button></li>
-        </ul>
-        <div class='navbar-start'>
-            <button mat-button [matMenuTriggerFor]="menu" >
-              <mat-icon class="mat-18">more_vert</mat-icon>
+    <div fxLayout="row">
+        <div><button mat-button routerLink="home">خانه</button></div>
+        <div><button mat-button routerLink="laleCard">لاله کارت</button></div>
+        <div><button mat-button >اینترنت پرسرعت</button></div>
+        <div><button mat-button >تعمیر خانه</button></div>
+    </div>
+      <div>
+        <button mat-button [matMenuTriggerFor]="menu">
+          <mat-icon class="mat-18">more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item matTooltip="ورود به حساب کاربری">
+            ورود <i class="material-icons"> fingerprint </i>
+          </button>
+          <button
+            mat-menu-item
+            [matMenuTriggerFor]="subMenu"
+            matTooltip="تغییر قالب"
+          >
+            قالب <i class="material-icons"> style </i>
+          </button>
+          <mat-menu #subMenu="matMenu">
+            <button mat-menu-item (click)="changeTheme('default')">
+              <figure
+                style="background: rgb(63, 81, 181);width: 30px;height: 30px;border-radius: 50%"
+              ></figure>
             </button>
-            <mat-menu #menu="matMenu" class="level-item">
-              <button mat-menu-item class="level-item" matTooltip="ورود به حساب کاربری">
-                ورود
-                <i class="material-icons">
-                  fingerprint
-                  </i>
-              </button>
-              <button mat-menu-item class="level-item"  matTooltip="تغییر قالب">
-قالب
-                <i class="material-icons">
-                    style
-                  </i>
-              </button>
 
-            </mat-menu>
-        </div>
-        </mat-toolbar>
-    </nav>
-
-
+            <button mat-menu-item (click)="changeTheme('purple')">
+              <figure
+                style="background:#6a1b9a;width:30px;height: 30px;border-radius: 50%"
+              ></figure>
+            </button>
+            <button mat-menu-item (click)="changeTheme('green')">
+              <figure
+                style="background: #00e676;width:30px;height: 30px;border-radius: 50%"
+              ></figure>
+            </button>
+            <button mat-menu-item (click)="changeTheme('dark')">
+              <figure
+                style="background: #d50000;width:30px;height: 30px;border-radius: 50%"
+              ></figure>
+            </button>
+          </mat-menu>
+        </mat-menu>
+      </div>
+    </mat-toolbar>
+  </nav>
+</div>

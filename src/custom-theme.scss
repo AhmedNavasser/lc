@@ -1,4 +1,5 @@
 @import '~@angular/material/theming';
+@import 'src/ComponentAffection.scss';
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -21,4 +22,38 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($candy-app-theme);
+
+  @include angular-material-theme($candy-app-theme);
+  @include particle-background-theme($candy-app-theme);
+
+$purple-primary: mat-palette($mat-purple,800);
+$purple-accent:  mat-palette($mat-green, A200, A100, A400);
+$purple-warn:    mat-palette($mat-deep-orange,A700);
+$purple-theme:   mat-light-theme($purple-primary, $purple-accent, $purple-warn);
+
+.purple{
+  @include angular-material-theme($purple-theme);
+  @include particle-background-theme($purple-theme);
+}
+
+$green-primary: mat-palette($mat-green,A700);
+$green-accent:  mat-palette($mat-purple, 900, A200, A400);
+$green-warn:    mat-palette($mat-pink,A400);
+$green-theme:   mat-light-theme($green-primary, $green-accent, $green-warn);
+
+.green{
+  @include angular-material-theme($green-theme);
+  @include particle-background-theme($green-theme);
+}
+
+$orange-primary: mat-palette($mat-red,A700);
+$orange-accent:  mat-palette($mat-orange, 800, A200, A400);
+$orange-warn:    mat-palette($mat-deep-orange,A700);
+$orange-theme:   mat-light-theme($orange-primary, $orange-accent, $orange-warn);
+
+.dark{
+  @include angular-material-theme($orange-theme);
+  @include particle-background-theme($orange-theme);
+}
+
+

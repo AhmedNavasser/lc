@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lale-card.component.css']
 })
 export class LaleCardComponent implements OnInit {
-
+  matCardImageSource = '../../assets/images/logo.png';
   constructor() { }
 
   ngOnInit() {

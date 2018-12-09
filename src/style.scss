@@ -1,0 +1,221 @@
+$primary-color: rgb(255, 255, 255);
+$primary-light-color: rgb(243, 243, 243);
+$primary-border-color: rgb(184, 184, 184);
+.scene {
+  width: 300px;
+  height: 400px;
+  margin: 40px 0;
+  perspective: 600px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+  box-shadow: 10px 3px 20px silver;
+}
+
+.card:hover {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  backface-visibility: hidden;
+}
+
+.card-face-front {
+
+  &-1{
+    background:linear-gradient(to right bottom,rgba(255, 209, 5, 0.8),rgba(255, 5, 5, 0.8)),url(../src/assets/images/featured-home-insurance.jpg);
+    background-size: cover;
+    background-blend-mode: screen;
+  }
+  &-2{
+    background:linear-gradient(to right bottom,rgba(255, 209, 5, 0.8),rgba(255, 5, 5, 0.8)),url(../src/assets/images/pic5.jpg);
+    background-size: 100% 100%;
+    background-blend-mode: screen;
+  }
+  &-3{
+    background: yellowgreen;
+  }
+}
+
+.card-face-back {
+  background: white;
+  border: 1px solid rgb(177, 177, 177);
+  transform: rotateY(180deg);
+}
+
+.section-cards {
+  position: relative;
+  background-color: $primary-light-color;
+  padding: 22rem 6rem 15rem 6rem;
+  height: auto;
+  margin: 0px;
+}
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  border: none;
+  &___side {
+    color: white;
+    font-size: 1rem;
+    height: 23rem;
+    border-radius: 0px;
+    border: none;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(rgb(0, 0, 0), 0.15);
+    overflow: hidden;
+    &--front {
+      background-color: $primary-color;
+    }
+    &--back {
+      transform: rotateY(180deg);
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgb(0, 161, 81),
+          rgb(37, 226, 132)
+        );
+      }
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgb(0, 126, 175),
+          rgb(61, 189, 240)
+        );
+      }
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgb(255, 132, 31),
+          rgb(184, 83, 0)
+        );
+      }
+    }
+  }
+  &:hover &___side--front {
+    transform: rotateY(180deg);
+  }
+  &:hover &___side--back {
+    transform: rotateY(0);
+  }
+  &___picture {
+    background-size: cover;
+    height: 10rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba(74, 255, 186, 0.6),
+          rgba(0, 197, 122, 0.6)
+        ),
+        url(../src/assets/images/featured-home-insurance.jpg);
+    }
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgb(0, 126, 175),
+          rgb(61, 189, 240)
+        ),
+        url(../src/assets/images/tand.jpg);
+    }
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgb(255, 150, 51),
+          rgb(223, 119, 0)
+        ),
+        url(../src/assets/images/pic5.jpg);
+    }
+  }
+  &___heading {
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 7rem;
+    right: 0.8rem;
+    width: 60%;
+  }
+  &___heading-span {
+    padding: 0 1rem;
+    box-decoration-break: clone;
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgb(74, 255, 186),
+        rgb(0, 197, 122)
+      );
+    }
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgb(0, 126, 175),
+        rgb(61, 189, 240)
+      );
+    }
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgb(255, 150, 51),
+        rgb(223, 119, 0)
+      );
+    }
+  }
+  &___details {
+    color: rgb(122, 122, 122);
+    font-size: 0.8rem;
+    ul {
+      list-style: none;
+      width: 100%;
+      margin: 0 auto;
+      padding: 5px;
+      text-align: center;
+      li {
+        padding: 10px 0;
+        &:not(:last-child) {
+          border-bottom: 1px solid #eee;
+        }
+      }
+    }
+  }
+  &___cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &___price-box {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: white;
+  }
+  &___price-only {
+    font-size: 1.4rem;
+  }
+  &___price-value {
+    font-size: 3rem;
+    font-weight: 100;
+  }
+}

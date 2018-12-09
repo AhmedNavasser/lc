@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, Route } from '@angular/router';
+import { Router } from '@angular/router';
+import { ChangeThemeService } from './services/change-theme.service';
 
 
 @Component({
@@ -8,9 +9,12 @@ import { Router, Route } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'lc';
-  constructor(private route:Router){
-
+  title = 'شرکت خدماتی لاله';
+  themeClass= localStorage.getItem('theme');
+  constructor(private route:Router , private themeService : ChangeThemeService){
+    this.themeService.toggleThemeObservable.subscribe((e:string) =>{
+      this.themeClass = e;
+      });
   }
   ngOnInit(): void {
     this.route.navigate(['/home']);
